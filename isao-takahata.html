@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Hasan">
+
+    <!-- Style Sheets -->
+    <!-- Common to all pages: Navbar etc -->
+    <link rel="stylesheet" href="styles/common-styles.css">
+    <!-- Styles specific to this page -->
+    <link rel="stylesheet" href="styles/the-creators-styles.css">
+    <!-- Font Awsome library for various icons: Social media links in footer etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <title>My Studio Ghibli Website</title>
+</head>
+
+<!-- Page Content -->
+
+<body>
+    <!-- Navigation bar at top of page -->
+    <!-- Includes two sub-navigation menus via onclick dropdowns -->
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <div class="subnav">
+            <a onclick="showSubnav(0)" class="active">The Creators &#11167;</a>
+            <div class="subnav-content">
+                <a href="hayao-miyazaki.html">Hayao Miyazaki</a>
+                <a class="active">Isao Takahata</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <a onclick="showSubnav(1)">Films &#11167;</a>
+            <div class="subnav-content">
+                <a href="coming-soon.html">Nausicaä of the Valley of the Wind (1984)</a>
+                <a href="coming-soon.html">Laputa: Castle in the Sky (1986)</a>
+                <a href="coming-soon.html">Grave of the Fireflies (1988)</a>
+                <a href="coming-soon.html">My Neighbour Totoro (1988)</a>
+                <a href="coming-soon.html">Kiki's Delivery Service (1989)</a>
+                <a href="coming-soon.html">Only Yesterday (1991)</a>
+                <a href="coming-soon.html">Porco Rosso (1992)</a>
+                <a href="coming-soon.html">Ocean Waves (1993)</a>
+                <a href="coming-soon.html">Pom Poko (1994)</a>
+                <a href="coming-soon.html">Whisper of the Heart (1995)</a>
+                <a href="coming-soon.html">Princess Mononoke (1997)</a>
+                <a href="coming-soon.html">My Neighbours the Yamadas (1999)</a>
+                <a href="coming-soon.html">Spirited Away (2001)</a>
+                <a href="coming-soon.html">The Cat Returns (2002)</a>
+                <a href="coming-soon.html">Howl's Moving Castle (2004)</a>
+                <a href="coming-soon.html">Tales from Earthsea (2006)</a>
+                <a href="coming-soon.html">Ponyo (2008)</a>
+                <a href="coming-soon.html">Arrietty (2010)</a>
+                <a href="coming-soon.html">From Up on Poppy Hill (2011)</a>
+                <a href="coming-soon.html">The Wind Rises (2013)</a>
+                <a href="coming-soon.html">The Tale of the Princess Kaguya (2013)</a>
+                <a href="coming-soon.html">When Marnie Was There (2014)</a>
+                <a href="coming-soon.html">The Red Turtle (2016)</a>
+                <a href="coming-soon.html">Earwig and the Witch (2020)</a>
+                <a href="coming-soon.html">How Do You Live? (TBA)</a>
+            </div>
+        </div>
+        <a href="interactive-tier-list.html">Interactive Tier List</a>
+    </div>
+    <!-- Return to Top button -->
+    <!-- Initially hidden. Appears after page has been scrolled down a certain amount -->
+    <button type="button" onclick="topOfPage()" class="top-button" id="top-button"
+        title="Top of Page">&#11165;<br>&#11165;</button>
+
+
+    <!-- Webpage Title -->
+    <div class="page-title">
+        <h1>Isao Takahata</h1>
+        <hr>
+    </div>
+
+    <!-- Container for the page content -->
+    <div class="director-content">
+        <!-- Container for the Director Biography Card -->
+        <!-- Bio text seperated as each row containing two columns, one heading and one text set -->
+        <div class="director-card-space">
+            <div class="director-card">
+                <img class="director-photo" src="images/creators-images/isao-takahata-profile.jpg" alt="Isao Takahata"
+                    title="Isao Takahata" width="200" height="200">
+                <div class="director-info">
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Name:</b></div>
+                        <div class="director-info-column data">Isao Takahata</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Date of Birth:</b></div>
+                        <div class="director-info-column data">29<sup>th</sup> October 1935</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Years at Ghibli:</b></div>
+                        <div class="director-info-column data">1985 - 2018</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Popular Films:</b></div>
+                        <div class="director-info-column data">Grave of the Fireflies (1988)<br>Only Yesterday
+                            (1991)<br>Pom Poko (1994)<br>The Tale of the Princess Kaguya (2013)</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Achievements:</b></div>
+                        <div class="director-info-column data">Worldwide Critical Acclaim<br>Studio Ghibli
+                            co-founder<br>Academy Award Nominee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Area for main text content -->
+        <div class="director-text-area">
+            <!-- All Text Elements -->
+            <!-- Only First unique elements commented (Heading, Text block, Sub-heading, Sub-text block, Image) -->
+            <div class="director-text">
+                <!-- Text divided in to numerous blocks -->
+                <!-- Contains: Headings, text blocks and images
+                Text block may contain sub-headings, sub-text blocks and images -->
+                <!-- onclick Javascript functionality implemented on headins and sub-headings to show/hide text/sub-text blocks and images
+                Text blocks, sub-headings, sub-text blocks and images hidden initially
+                See: the-creators-scripts.js-->
+                <div class="director-text-block">
+                    <!-- Heading -->
+                    <h2 onclick="showText(this)">An Unknown Opportunity &#11167;</h2>
+                    <!-- Text Block -->
+                    <div class="director-text-text">
+                        <p>Born on 29<sup>th</sup> October 1935 in Ise (formerly Ujiyamada), Isao Takahata was not a
+                            proficient
+                            drawer, nor did he have a passion for animation. However, he still had a keen interest in
+                            the arts, particularly with music and literature. His childhood coincided with WWII and in
+                            1945 he and his family survived a major United States air raid on Okayama City. The
+                            firebombing attack destroyed almost the entire city, including over 12,000 homes and killing
+                            more than 1,700 people.</p>
+                        <p>In 1959, Takahata graduated from the University of Tokyo with a degree in French literature.
+                            It was during his studies when Takahata’s interest in animation began. He had seen the
+                            unfinished, but still released, French animated film The King and the Mockingbird (1952).
+                            Takahata became intrigued by the idea of using animation as a storytelling medium and
+                            decided he wished to write and direct animated films, rather than draw animations himself.
+                            Throughout his decades spanning career, Isao Takahata wrote and directed eight feature
+                            films, most of which were produced but the company he co-founded, Studio Ghibli.</p>
+                        <!-- Image with caption -->
+                        <figure>
+                            <img class="text-image" draggable="false" src="images/creators-images/takahata-young.jpg"
+                                alt="A young Isao Takahata" title="A young Isao Takahata" height="200" width="200">
+                            <figcaption>A young Isao Takahata, early in his career.</figcaption>
+                        </figure>
+                    </div>
+                    <!-- End of Text Block -->
+                </div>
+                <!-- End of full Text Block (Incuding Heading) -->
+                <!-- New full Text Block (Including Heading) -->
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Pre-Studio Ghibli Career &#11167;</h2>
+                    <div class="director-text-text">
+                        <p>By chance, a friend suggested Takahata apply for a directing job at Toei Animation. After
+                            passing some entrance exams, he was hired by Toei Animation and began his professional
+                            career as an assistant director. He spent a number of years working on several of Toei’s
+                            films and television shows. Whilst working at Toei Animation he soon met another novice
+                            employee, aspiring animator and writer Hayao Miyazaki.</p>
+                        <!-- Sub-heading (Within Text Block) -->
+                        <h3 onclick="showText(this)">The Great Adventure of Horus, Prince of the Sun (1968) &#11167;
+                        </h3>
+                        <!-- Sub-text Block -->
+                        <div class="film-text">
+                            <p>Isao Takahata’s directorial debut came when asked by Toei Animation to direct their next
+                                film, The Great Adventure of Horus, Prince of the Sun (1968). Significantly, Hayao
+                                Miyazaki served as a key animator on this film. Although the film has gone on to be
+                                fairly well received, it was a total commercial failure and Takahata was demoted. Even
+                                still, the film marks the beginning of a long and fruitful career of professional
+                                collaborations and a lifelong friendship between Isao Takahata and Hayao Miyazaki.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/horus-poster.jpg"
+                                    alt="The Great Adventure of Horus, Prince of the Sun (1968)"
+                                    title="The Great Adventure of Horus, Prince of the Sun (1968)" height="200"
+                                    width="200">
+                                <figcaption>A Japanese marketing poster for The Great Adventure of Horus, Prince of the
+                                    Sun (1968).</figcaption>
+                            </figure>
+                        </div>
+                        <!-- End of Sub-text Block -->
+                        <!-- Next Sub-heading -->
+                        <h3 onclick="showText(this)">Jarinko Chie (1981) &#11167;</h3>
+                        <!-- Next Sub-text block -->
+                        <div class="film-text">
+                            <p>After spending the previous decade working on a variety of television projects and short
+                                films for a number of companies, Isao Takahata joined TMS Entertainment to make Jarinko
+                                Chan (1981); his first animated feature film as writer and director. Based on the manga
+                                of the same name, the film follows ten year old Chie who is tasked with helping her
+                                troublesome Yakuza father run a small tavern in Osaka. Following the film’s success,
+                                Takahata led production of a subsequent television spinoff.</p>
+                        </div>
+                        <h3 onclick="showText(this)">Gauche the Cellist (1982) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Takahata’s next film, Gauche the Cellist (1982), was based on the children’s short story
+                                of the same name. Featuring the music of Ludwig van Beethoven, the film follows a young
+                                cellist who aspires to hone his craft while interacting with various wildlife that visit
+                                his house each night.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Studio Ghibli Career &#11167;</h2>
+                    <div class="director-text-text">
+                        <p>Hayao Miyazaki and film producer Toshio Suzuki approached Isao Takahata with the idea of
+                            co-founding their own animation studio following the success of Miyazaki’s Nausicaä of the
+                            Valley of the Wind (1984). Subsequently, Studio Ghibli was formed on 15<sup>th</sup> June
+                            1985 by
+                            founding members Isao Takahata, Hayao Miyazaki and film producers Toshio Suzuki and
+                            Yasuyoshi Tokuma. Both Takahata and Miyazaki have publically acknowledged the pivotal role
+                            of Suzuki in the establishment and success of Studio Ghibli.</p>
+                        <div class="quote">
+                            <p>“If it were not for Mr. Suzuki, there wouldn’t have been a Studio Ghibli” – Hayao
+                                Miyazaki</p>
+                        </div>
+                        <p>Primarily, Studio Ghibli would produce animated feature films directed by Hayao Miyazaki.
+                            Isao Takahata often served as a producer, as well as filling a variety of roles throughout
+                            the studio. Takahata would go on to become Studio Ghibli’s second most prolific director
+                            (behind Hayao Miyazaki) making five animated feature films, as well as one documentary,
+                            under the company’s name.</p>
+                        <figure>
+                            <img class="text-image" draggable="false" src="images/creators-images/ghibli-founders.jpg"
+                                alt="Studio Ghibli founders" title="Studio Ghibli founders" height="200" width="200">
+                            <figcaption>Three of the Studio Ghibli founders. Hayao Miyazaki, Toshio Suzuki, Isao
+                                Takahata (left to right).</figcaption>
+                        </figure>
+                        <h3 onclick="showText(this)">The Story of Yanagawa’s Canals (1987) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Isao Takahata’s first production for Studio Ghibli was in fact a live-action documentary;
+                                although the film does include some animated aspects. The documentary details the
+                                history of Yanagawa, Fukuoka, Japan and the locals’ struggle to preserve its famous
+                                canals from water pollution. Takahata initially travelled to Yanagawa to serve as a
+                                location scout for Miyazaki’s next film. However, after spending months exploring the
+                                city and waterways, as well as interacting with the local communities, Takahata decided
+                                to focus his efforts on producing a documentary.</p>
+                            <p>Interestingly, as the film went over budget and years past the agreed deadline, Hayao
+                                Miyazaki began production on a new project to offset the additional costs of Takahata’s
+                                production. This grew into Laputa: Castle in the Sky (1986); a major financial success
+                                for Studio Ghibli in their early years.</p>
+                            <div class="quote">
+                                <p>“If Takahata had made his movie on schedule, Laputa wouldn’t have been born” – Toshio
+                                    Suzuki</p>
+                            </div>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/yanagawa-canals.jpg" alt="Yanagawa’s Canals"
+                                    title="Yanagawa’s Canals" height="200" width="200">
+                                <figcaption>A photo of one of the canals in Yanagawa, Fukuoka, Japan.</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Grave of the Fireflies (1988) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Isao Takahata’s first animated feature film for Studio Ghibli was Grave of the Fireflies
+                                (1988); based on the semi-autobiographical short story of the same name. The film
+                                follows siblings Seita (fourteen years old) and Setsuko (four years old) and their
+                                struggle to survive the end of WWII in Japan. This is without doubt Studio Ghibli’s most
+                                mature work and Isao Takahata’s most important film. It is a harrowing and emotional
+                                depiction of the pernicious repercussions of war on a society; the civilians and most
+                                vulnerable therein. The film contains an early sequence depicting a visceral and
+                                devastating destruction of Kobe in a firebombing attack and it is difficult not to draw
+                                comparisons to Takahata’s real life experiences during the attack on Okayama City in his
+                                childhood.</p>
+                            <p>The film has received universal critical acclaim and is often regarded as among the
+                                greatest and most powerful war films ever made. It is also notoriously considered one of
+                                the saddest films of all time.</p>
+                            <div class="quote">
+                                <p>A true cinematic masterpiece that must be seen by all.</p>
+                            </div>
+                            <p>Often labelled an anti-war film due to entirely focusing on the personal tragedies as a
+                                result of war, rather than to glamorise war as a heroic struggle between nations; a
+                                common criticism labelled at other so-called anti-war films. Grave of the Fireflies
+                                (1988) and My Neighbour Totoro (1988) were released theatrically in Japan as a dual
+                                bill. The stark contrast between the heart-warming, wondrous Totoro and the
+                                gut-wrenching, harrowing Fireflies has been described as “one of the most moving and
+                                remarkable double bills ever offered to a cinema audience”.</p>
+                            <p>The juxtaposition between graphic, unfiltered effects of war and the unwavering joy and
+                                innocence of children, provides a poignant and emotional contrast in Grave of the
+                                Fireflies (1988). Paired with Michio Mamiya’s exceptional melancholic music score and
+                                the “almost minimalistic” animation style, invokes a truly heart-breaking atmosphere for
+                                the audience that is often difficult to watch; none more so than in the film’s happier
+                                moments, like watching two children catch fireflies.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/fireflies-postbomb.jpg"
+                                    alt="Grave of the Fireflies (1988)" title="Grave of the Fireflies (1988)"
+                                    height="200" width="200">
+                                <figcaption>The result of the fireboming attack on Kobe in Grave of the Fireflies
+                                    (1988).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Only Yesterday (1991) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Isao Takahata’s next film was Only Yesterday (1991), based on the manga of the same name.
+                                A rather unique film in the sense that it is a realistic, introspective drama aimed at
+                                mainly adult woman; a genre typically uncommon in animated feature films. The film
+                                follows Taeko, a twenty-seven year old unmarried office worker in Tokyo who decides to
+                                travel to the rural countryside to aid a safflower harvest over the summer; where she
+                                begins to recall memories of her childhood.</p>
+                            <p>The film was a surprise box office success, attracting a large adult audience and
+                                becoming the highest-grossing Japanese film of 1991. Regularly described as “Studio
+                                Ghibli’s forgotten masterpiece” as it did not have a widespread North American release
+                                until 2016, but has still received universal critical acclaim.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/only-yesterday-pineapple.jpg"
+                                    alt="Only Yesterday (1991)" title="Only Yesterday (1991)" height="200" width="200">
+                                <figcaption>Taeko's memory of her family eating a pineapple for the first time in Only
+                                    Yesterday (1991).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Pom Poko (1994) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Takahata’s third animated feature for Ghibli was Pom Poko (1994). The film follows Tanuki
+                                (Japanese raccoon dogs), magical creatures capable of shape-shifting according to
+                                Japanese folklore, and their mischievous fun-loving antics. The film is essentially an
+                                environmental allegory, as the Tanuki fight back against a gigantic suburban development
+                                plan that threatens their forest habitat. The film was both a commercial and critical
+                                success, especially within Japan where the folklore-heavy and culturally relevant themes
+                                are easily recognisable.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/pom-poko-tanuki.jpg" alt="Pom Poko (1994)"
+                                    title="Tanuki" height="200" width="200">
+                                <figcaption>The Tanuki from Pom Poko (1994).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">My Neighbours the Yamadas (1999) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Arguably Studio Ghibli’s and Isao Takahata’s most experimental film, My Neighbours the
+                                Yamadas (1999) is a major stylistic departure from the traditional animation style
+                                presented in most of Ghibli’s other films. Rather than traditional hand-drawn cell
+                                animation, the film’s art style is more reminiscent of watercolour pictures.
+                                Additionally, instead of a typical start-to-finish narrative, the film is presented as a
+                                series of vignettes (short stories) following the daily lives of the Yamada family.
+                                Although not one of Ghibli’s most successful films, it received positive reviews for its
+                                unique visual style, its humour and observational look at modern Japanese suburban
+                                family life.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/yamada-family.jpg"
+                                    alt="My Neighbours the Yamadas (1999)" title="My Neighbours the Yamadas (1999)"
+                                    height="200" width="200">
+                                <figcaption>The Yamada family sitting at home in My Neighbours the Yamadas (1999).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">The Tale of the Princess Kaguya (2013) &#11167;</h3>
+                        <div class="film-text">
+                            <p>After a fourteen year gap, Isao Takahata released his final film for Studio Ghibli. The
+                                Tale of the Princess Kaguya (2013) is based on a 10<sup>th</sup> century Japanese
+                                literary tale,
+                                The Tale of the Bamboo Cutter. The film follows a bamboo cutter who discovers a
+                                miniature baby girl inside a glowing bamboo shoot. Believing her to be a divine
+                                presence, the bamboo cutter and his wife decide to raise the child as their own. The
+                                mysterious young princess grows rapidly and enthrals all who encounter her, but
+                                ultimately she must confront her divine fate.</p>
+                            <div class="quote">
+                                <p>The film builds upon the stylistic foundations of Takahata’s previous film My
+                                    Neighbour the Yamadas (1999), depicting an art style reminiscent of watercolour
+                                    paintings.</p>
+                            </div>
+                            <p>Takahata felt this art style would help the audience emotionally connect with the film as
+                                they are able to “imagine the reality deep within the drawings”, rather than be
+                                distracted by a realistic art style. Feminism and the restriction of woman in
+                                traditional settings are core themes explored throughout the film, as well as the weight
+                                of expectations within social conformity and adulthood responsibility.</p>
+                            <p>The Tale of the Princess Kaguya (2013) is among Studio Ghibli’s most acclaimed films and
+                                considered a modern animated classic. The film was nominated for both the Japan Academy
+                                Prize for Animation of the Year and the Academy Award for Best Animated Feature. The
+                                exquisite visual beauty, narrative depth and frank, melancholic honesty all combine to
+                                create an exceptional cinematic experience.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/kaguya-running.jpg"
+                                    alt="The Tale of the Princess Kaguya (2013)"
+                                    title="The Tale of the Princess Kaguya (2013)" height="200" width="200">
+                                <figcaption>Kaguya running away from a traumatic event in The Tale of the Princess
+                                    Kaygua (2013).</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Legacy &#11167;</h2>
+                    <div class="director-text-text">
+                        <p>Isao Takahata died on 5<sup>th</sup> April 2018, aged 82, following a battle with lung
+                            cancer. He
+                            enjoyed a long and successful career in the animation industry, undertaking a variety of
+                            roles within the production process. He is fondly remember as an icon of the industry and a
+                            crucial cog in the successes of one of the most famous animation studios ever created; the
+                            company he co-founded, Studio Ghibli. A film studio now synonymous with high-quality around
+                            the world. Although not a gifted animator himself, his initial intrigue in using animation
+                            as a storytelling medium proved to be a vindicating decision.</p>
+                        <div class="quote">
+                            <p>He wrote and directed some of the most exceptionally well crafted animated feature films
+                                ever made.</p>
+                        </div>
+                        <p>Most of his projects were uniquely mature character pieces aimed at adults, full of serious
+                            and unfiltered themes including the cost of war, environmentalism and adulthood
+                            responsibility. Particular mention must go to the gorgeous and experimental The Tale of the
+                            Princess Kaguya (2013) and the timeless, yet harrowing Grave of the Fireflies (1988).</p>
+                        <p>A farewell ceremony was held at the Ghibli Museum in Tokyo, where Hayao Miyazaki spoke
+                            publically about Takahata for the first time following his passing:<br>“I was convinced that
+                            Paku-san [Takahata’s nickname] would live to be 95 years old, but unfortunately he passed
+                            away. It makes me think my time is also limited… Thank you, Paku-san.” – An emotional Hayao
+                            Miyazaki.</p>
+                        <p>Perhaps unjustly, he is less of a household name than lifelong friend Hayao Miyazaki and his
+                            films only achieved modest commercial success in comparison. But what is certain is that
+                            Studio Ghibli, and the animation industry as a whole, would not be the same today without
+                            Isao Takahata’s immeasurable contributions.</p>
+                        <figure>
+                            <img class="text-image" draggable="false" src="images/creators-images/takahata-art.jpg"
+                                alt="Isao Takahata Fan Art" title="Isao Takahata Fan Art" height="200" width="200">
+                            <figcaption>Fan art of Isao Takahata surrounded by some of his iconic characters.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Javascript Files -->
+<!-- Common to all pages: Navbar dropdowns etc. -->
+<script src="scripts/common-scripts.js"></script>
+<!-- Scripts specific to this page -->
+<script src="scripts/the-creators-scripts.js"></script>
+
+<!-- Webpage Footer: Same on all pages -->
+<footer>
+    <!-- Typical Footer Content: Site Map, Social Media Links, Contact/Newsletter Subscription -->
+    <div class="footer-content">
+        <!-- Site Map -->
+        <div class="site-map">
+            <a href="index.html">Home</a><br>
+            <a href="hayao-miyazaki.html">The Creators: Hayao Miyazaki</a><br>
+            <a class="active">The Creators: Isao Takahata</a><br>
+            <a href="coming-soon.html">Films: Coming Soon</a><br>
+            <a href="interactive-tier-list.html">Interactive Tier List</a><br>
+        </div>
+        <!-- Div container to group and display social media links and contact info vertically -->
+        <div class="interaction">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <p>Follow us to stay up to date with everything Studio Ghibli!</p>
+                <a href="https://www.facebook.com/studioghibliuk/" target="_blank" class="fa-brands fa-facebook"></a>
+                <a href="https://twitter.com/ghibliusa" target="_blank" class="fa-brands fa-twitter"></a>
+                <a href="https://www.instagram.com/ghibliuk/?hl=en" target="_blank" class="fa-brands fa-instagram"></a>
+            </div>
+            <!-- Contact Info and Newsletter -->
+            <div class="contact">
+                <p>Subscribe to our Newsletter!</p>
+                <!-- Disabled form submission with simple browser alert instead
+                Newsletter does not exist thus actual data storage functionality not implemented -->
+                <form onsubmit="alert(name.value + ' has subscribed!'); return false;" autocomplete="on">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="your-email@address.co.uk" required>
+                    <input type="submit" id="sub-btn" value="Subscribe">
+                </form>
+                <p><b>Author:</b>&emsp;Josh Hasan - myemail@example.co.uk</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Copyright Info to display at bottom -->
+    <!-- Span items styled as links, but without actual documents to link to -->
+    <div class="copyright">
+        <p>Copyright &#169; 2022 My Studio Ghibli Website. All Rights Reserved.</p>
+        <span>Privacy Policy</span>
+        <span>Terms & Conditions</span>
+    </div>
+    <!-- Developer Note -->
+    <hr>
+    <p class="note"><b><u>Note:</u></b> This is a footer design demonstration only. The social media links direct to
+        some official Studio Ghibli pages. There is no Newsletter subscription, Privacy Policy or Terms & Conditions
+        documents.</p>
+</footer>
+
+</html>

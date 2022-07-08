@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Hasan">
+
+    <!-- Style Sheets -->
+    <!-- Common to all pages: Navbar etc -->
+    <link rel="stylesheet" href="styles/common-styles.css">
+    <!-- Styles specific to this page -->
+    <link rel="stylesheet" href="styles/coming-soon-styles.css">
+    <!-- Font Awsome library for various icons: Social media links in footer etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <title>My Studio Ghibli Website</title>
+</head>
+
+<!-- Page Content -->
+
+<body>
+    <!-- Navigation bar at top of page -->
+    <!-- Includes two sub-navigation menus via onclick dropdowns -->
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <div class="subnav">
+            <a onclick="showSubnav(0)">The Creators &#11167;</a>
+            <div class="subnav-content">
+                <a href="hayao-miyazaki.html">Hayao Miyazaki</a>
+                <a href="isao-takahata.html">Isao Takahata</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <a onclick="showSubnav(1)" class="active">Films &#11167;</a>
+            <div class="subnav-content">
+                <a class="active">Nausicaä of the Valley of the Wind (1984)</a>
+                <a>Laputa: Castle in the Sky (1986)</a>
+                <a>Grave of the Fireflies (1988)</a>
+                <a>My Neighbour Totoro (1988)</a>
+                <a>Kiki's Delivery Service (1989)</a>
+                <a>Only Yesterday (1991)</a>
+                <a>Porco Rosso (1992)</a>
+                <a>Ocean Waves (1993)</a>
+                <a>Pom Poko (1994)</a>
+                <a>Whisper of the Heart (1995)</a>
+                <a>Princess Mononoke (1997)</a>
+                <a>My Neighbours the Yamadas (1999)</a>
+                <a>Spirited Away (2001)</a>
+                <a>The Cat Returns (2002)</a>
+                <a>Howl's Moving Castle (2004)</a>
+                <a>Tales from Earthsea (2006)</a>
+                <a>Ponyo (2008)</a>
+                <a>Arrietty (2010)</a>
+                <a>From Up on Poppy Hill (2011)</a>
+                <a>The Wind Rises (2013)</a>
+                <a>The Tale of the Princess Kaguya (2013)</a>
+                <a>When Marnie Was There (2014)</a>
+                <a>The Red Turtle (2016)</a>
+                <a>Earwig and the Witch (2020)</a>
+                <a>How Do You Live? (TBA)</a>
+            </div>
+        </div>
+        <a href="interactive-tier-list.html">Interactive Tier List</a>
+    </div>
+    <!-- Return to Top button -->
+    <!-- Initially hidden. Appears after page has been scrolled down a certain amount -->
+    <button type="button" onclick="topOfPage()" class="top-button" id="top-button"
+        title="Top of Page">&#11165;<br>&#11165;</button>
+
+
+    <!-- Full Page Content -->
+    <div class="full-content">
+        <!-- Text Displayed in Center -->
+        <div class="middle-text">
+            <h1>Coming Soon</h1>
+            <p>Information & Review!</p>
+            <!-- Division Line for the Countdown -->
+            <hr class="timer-line">
+            <!-- Countdown Display updated via Javascript -->
+            <!-- See coming-soon-script.js -->
+            <div id="counter" class="counter">
+                <div class="time">
+                    <span id="days">0</span><br>Days
+                </div>
+                <div class="time">
+                    <span id="hours">0</span><br>Hrs
+                </div>
+                <div class="time">
+                    <span id="minutes">0</span><br>Mins
+                </div>
+                <div class="time">
+                    <span id="seconds">30</span><br>Secs
+                </div>
+            </div>
+        </div>
+        <!-- Text Displayed at Bottom
+        Developer Note -->
+        <div class="bottom-text">
+            <p>This webpage was developed as a simple demonstration. The page will not actually be completed.</p>
+            <p><b><u>Note:</u></b> All links in the Films dropdown direct to this page.</p>
+        </div>
+    </div>
+</body>
+
+<!-- Javascript Files -->
+<!-- Common to all pages: Navbar dropdowns etc. -->
+<script src="scripts/common-scripts.js"></script>
+<!-- Scripts specific to this page -->
+<script src="scripts/coming-soon-scripts.js"></script>
+
+<!-- Webpage Footer: Same on all pages -->
+<footer>
+    <!-- Typical Footer Content: Site Map, Social Media Links, Contact/Newsletter Subscription -->
+    <div class="footer-content">
+        <!-- Site Map -->
+        <div class="site-map">
+            <a href="index.html">Home</a><br>
+            <a href="hayao-miyazaki.html">The Creators: Hayao Miyazaki</a><br>
+            <a href="isao-takahata.html">The Creators: Isao Takahata</a><br>
+            <a class="active">Films: Coming Soon</a><br>
+            <a href="interactive-tier-list.html">Interactive Tier List</a><br>
+        </div>
+        <!-- Div container to group and display social media links and contact info vertically -->
+        <div class="interaction">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <p>Follow us to stay up to date with everything Studio Ghibli!</p>
+                <a href="https://www.facebook.com/studioghibliuk/" target="_blank" class="fa-brands fa-facebook"></a>
+                <a href="https://twitter.com/ghibliusa" target="_blank" class="fa-brands fa-twitter"></a>
+                <a href="https://www.instagram.com/ghibliuk/?hl=en" target="_blank" class="fa-brands fa-instagram"></a>
+            </div>
+            <!-- Contact Info and Newsletter -->
+            <div class="contact">
+                <p>Subscribe to our Newsletter!</p>
+                <!-- Disabled form submission with simple browser alert instead
+                Newsletter does not exist thus actual data storage functionality not implemented -->
+                <form onsubmit="alert(name.value + ' has subscribed!'); return false;" autocomplete="on">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="your-email@address.co.uk" required>
+                    <input type="submit" id="sub-btn" value="Subscribe">
+                </form>
+                <p><b>Author:</b>&emsp;Josh Hasan - myemail@example.co.uk</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Copyright Info to display at bottom -->
+    <!-- Span items styled as links, but without actual documents to link to -->
+    <div class="copyright">
+        <p>Copyright &#169; 2022 My Studio Ghibli Website. All Rights Reserved.</p>
+        <span>Privacy Policy</span>
+        <span>Terms & Conditions</span>
+    </div>
+    <!-- Developer Note -->
+    <hr>
+    <p class="note"><b><u>Note:</u></b> This is a footer design demonstration only. The social media links direct to
+        some official Studio Ghibli pages. There is no Newsletter subscription, Privacy Policy or Terms & Conditions
+        documents.</p>
+</footer>
+
+</html>

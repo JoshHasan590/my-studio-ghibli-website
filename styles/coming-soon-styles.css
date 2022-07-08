@@ -1,0 +1,54 @@
+/* Coming Soon Page Style
+Author: Josh Hasan */
+
+/* Linear Gradient function to apply a black overlay, with 0.5 opacity, to darken the background image */
+.full-content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coming-soon.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: right bottom;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+/* Uses flexbox and alignment used to horizontally and verticalyl center the text */
+.middle-text {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Small hr division for coundown timer */
+hr {
+    width: 20%;
+}
+
+/* Styles for the counter display */
+.counter {
+    display: flex;
+    flex-flow: row nowrap;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/* Styles for each time item in the counter */
+.time {
+    padding: 0 5px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/* Styles and position for the bottom of screen text */
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    text-align: start;
+    font-size: small;
+}

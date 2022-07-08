@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Hasan">
+
+    <!-- Style Sheets -->
+    <!-- Common to all pages: Navbar etc -->
+    <link rel="stylesheet" href="styles/common-styles.css">
+    <!-- Styles specific to this page -->
+    <link rel="stylesheet" href="styles/the-creators-styles.css">
+    <!-- Font Awsome library for various icons: Social media links in footer etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <title>My Studio Ghibli Website</title>
+</head>
+
+<!-- Page Content -->
+
+<body>
+    <!-- Navigation bar at top of page -->
+    <!-- Includes two sub-navigation menus via onclick dropdowns -->
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <div class="subnav">
+            <a onclick="showSubnav(0)" class="active">The Creators &#11167;</a>
+            <div class="subnav-content">
+                <a class="active">Hayao Miyazaki</a>
+                <a href="isao-takahata.html">Isao Takahata</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <a onclick="showSubnav(1)">Films &#11167;</a>
+            <div class="subnav-content">
+                <a href="coming-soon.html">Nausicaä of the Valley of the Wind (1984)</a>
+                <a href="coming-soon.html">Laputa: Castle in the Sky (1986)</a>
+                <a href="coming-soon.html">Grave of the Fireflies (1988)</a>
+                <a href="coming-soon.html">My Neighbour Totoro (1988)</a>
+                <a href="coming-soon.html">Kiki's Delivery Service (1989)</a>
+                <a href="coming-soon.html">Only Yesterday (1991)</a>
+                <a href="coming-soon.html">Porco Rosso (1992)</a>
+                <a href="coming-soon.html">Ocean Waves (1993)</a>
+                <a href="coming-soon.html">Pom Poko (1994)</a>
+                <a href="coming-soon.html">Whisper of the Heart (1995)</a>
+                <a href="coming-soon.html">Princess Mononoke (1997)</a>
+                <a href="coming-soon.html">My Neighbours the Yamadas (1999)</a>
+                <a href="coming-soon.html">Spirited Away (2001)</a>
+                <a href="coming-soon.html">The Cat Returns (2002)</a>
+                <a href="coming-soon.html">Howl's Moving Castle (2004)</a>
+                <a href="coming-soon.html">Tales from Earthsea (2006)</a>
+                <a href="coming-soon.html">Ponyo (2008)</a>
+                <a href="coming-soon.html">Arrietty (2010)</a>
+                <a href="coming-soon.html">From Up on Poppy Hill (2011)</a>
+                <a href="coming-soon.html">The Wind Rises (2013)</a>
+                <a href="coming-soon.html">The Tale of the Princess Kaguya (2013)</a>
+                <a href="coming-soon.html">When Marnie Was There (2014)</a>
+                <a href="coming-soon.html">The Red Turtle (2016)</a>
+                <a href="coming-soon.html">Earwig and the Witch (2020)</a>
+                <a href="coming-soon.html">How Do You Live? (TBA)</a>
+            </div>
+        </div>
+        <a href="interactive-tier-list.html">Interactive Tier List</a>
+    </div>
+    <!-- Return to Top button -->
+    <!-- Initially hidden. Appears after page has been scrolled down a certain amount -->
+    <button type="button" onclick="topOfPage()" class="top-button" id="top-button"
+        title="Top of Page">&#11165;<br>&#11165;</button>
+
+
+    <!-- Webpage Title -->
+    <div class="page-title">
+        <h1>Hayao Miyazaki</h1>
+        <hr>
+    </div>
+
+    <!-- Container for the page content -->
+    <div class="director-content">
+        <!-- Container for the Director Biography Card -->
+        <!-- Bio text seperated as each row containing two columns, one heading and one text set -->
+        <div class="director-card-space">
+            <div class="director-card">
+                <img class="director-photo" src="images/creators-images/hayao-miyazaki-profile.jpg" alt="Hayao Miyazaki"
+                    title="Hayao Miyazaki" width="200" height="200">
+                <div class="director-info">
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Name:</b></div>
+                        <div class="director-info-column data">Hayao Miyazaki</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Date of Birth:</b></div>
+                        <div class="director-info-column data">5<sup>th</sup> January 1941</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Years at Ghibli:</b></div>
+                        <div class="director-info-column data">1985 - Present</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Popular Films:</b></div>
+                        <div class="director-info-column data">My Neighbour Totoro (1988)<br>Kiki's Delivery
+                            Service (1989)<br>Princess Mononoke (1997)<br>Spirited Away
+                            (2001)<br>Howls Moving Castle (2004)<br>The Wind Rises (2013)</div>
+                    </div>
+                    <div class="director-info-row">
+                        <div class="director-info-column"><b>Achievements:</b></div>
+                        <div class="director-info-column data">Worldwide Commercial Success<br>Worldwide Critical
+                            Acclaim<br>Studio Ghibli co-founder<br>Academy Award Winner<br>Academy
+                            Honorary Award Winner<br>Person of Cultural Merit (Japan)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Area for main text content -->
+        <div class="director-text-area">
+            <!-- All Text Elements -->
+            <!-- Only First unique elements commented (Heading, Text block, Sub-heading, Sub-text block, Image) -->
+            <div class="director-text">
+                <!-- Text divided in to numerous blocks -->
+                <!-- Contains: Headings, text blocks and images
+                Text block may contain sub-headings, sub-text blocks and images -->
+                <!-- onclick Javascript functionality implemented on headins and sub-headings to show/hide text/sub-text blocks and images
+                Text blocks, sub-headings, sub-text blocks and images hidden initially
+                See: the-creators-scripts.js-->
+                <div class="director-text-block">
+                    <!-- Heading -->
+                    <h2 onclick="showText(this)">A Love of Drawing &#11167;</h2>
+                    <!-- Text Block -->
+                    <div class="director-text-text">
+                        <p>Born on 5<sup>th</sup> January 1941 in Tokyo, Hayao Miyazaki had always demonstrated a
+                            passion for manga
+                            and animation from a young age. During his school years he aspired to become a manga artist
+                            and much of his early drawings were of planes, tanks and battleships as he initially
+                            struggled to draw people. He destroyed most of these as he felt copying other artist’s
+                            styles was preventing his own development as an artist. Later he would graduate from
+                            Gakushuin University with degrees in political science and economics. During his studies, he
+                            would regularly visit his middle-school art teacher; sketching and drawing manga in his
+                            studio.</p>
+                        <p>His interest in animation was sparked by the film Panda and the Magic Serpent (1958); Japan’s
+                            first feature-length animated film in colour. He later recounted that the film left a
+                            profound impression on him and that he was “moved to the depth of his soul”. Throughout his
+                            decades spanning career, Hayao Miyazaki has written and directed eleven feature films, most
+                            of which were produced by the company he co-founded, Studio Ghibli.</p>
+                        <!-- Image with caption -->
+                        <figure>
+                            <img class="text-image" draggable="false" src="images/creators-images/miyazaki-young.jpg"
+                                alt="A young Hayao Miyazaki" title="A young Hayao Miyazaki" height="200" width="200">
+                            <figcaption>A young Hayao Miyazaki at his desk, early in his career.</figcaption>
+                        </figure>
+                    </div>
+                    <!-- End of Text Block -->
+                </div>
+                <!-- End of full Text Block (Incuding Heading)-->
+                <!-- New full Text Block (Including Heading) -->
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Pre-Studio Ghibli Career &#11167;</h2>
+                    <div class="director-text-text">
+                        <p>He began his professional career in 1963 at Toei Animation, working as an in-between artist.
+                            This involved drawing the intermediate frames between two key frames, a process used to
+                            construct the illusion of movement in classic hand-drawn animation. Within 12 months of his
+                            arrival he became the chief secretary of Toei Animation’s labour union and strove to improve
+                            the treatment of animators; an issue still present within the industry today.</p>
+                        <p>Whilst working at Toei Animation he soon met another novice employee, aspiring director Isao
+                            Takahata. During his time at Toei Animation, Miyazaki grew to work as a key animator on a
+                            number of projects, most notably on The Great Adventure of Horus, Prince of the Sun (1968);
+                            significantly Takahata’s feature length directorial debut. This marks the beginning of long
+                            and fruitful career of professional collaborations and a lifelong personal friendship
+                            between the two.</p>
+                        <!-- Sub-heading (Within Text Block) -->
+                        <h3 onclick="showText(this)">The Castle of Cagliostro (1979) &#11167;</h3>
+                        <!-- Sub-text Block -->
+                        <div class="film-text">
+                            <p>Miyazaki’s breakthrough moment came with his directorial debut, The Castle of Cagliostro
+                                (1979); a Lupin III film. Serving as writer, director and key animator, the film is
+                                truly of Miyazaki’s making and it went on to become the most successful entry in the
+                                Lupin III franchise. The changes made to the characters behaviours and personality
+                                traits were initially not well received by fans of the pre-existing material. However,
+                                the decision to move away from the tired and crude caricatures, towards more family
+                                friendly and well-rounded character work is, somewhat ironically, considered the moment
+                                Lupin “grew up”. The Castle of Cagliostro is a massively influential film; now seen as
+                                an early anime classic. The detail in animation, particularly the environments and
+                                backgrounds, was unrivalled at the time. The Castle of Cagliostro provides an
+                                identifiable benchmark and foundation of the signature visual, story and thematic
+                                styles, which would come to define Hayao Miyazaki’s career.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/cagliostro-still.jpg"
+                                    alt="The Castle of Cagliostro (1979)" title="The Castle of Cagliostro (1979)"
+                                    height="200" width="200">
+                                <figcaption>A still image of the castle from The Castle of Cagliostro (1979).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- End of Sub-text Block -->
+                        <!-- Next Sub-heading -->
+                        <h3 onclick="showText(this)">Nausicaä of the Valley of the Wind (1984) &#11167;</h3>
+                        <!-- Next Sub-text block -->
+                        <div class="film-text">
+                            <p>In the years following The Castle of Cagliostro’s release, Hayao Miyazaki began writing
+                                and illustrating a manga series titled Nausicaä of the Valley of the Wind, with the
+                                first chapter releasing in 1982. Following the success of his manga, Miyazaki agreed to
+                                a film adaption, on the condition that he would serve as writer, director and animator.
+                                Nausicaä of the Valley of the Wind would release in 1984. Although it released prior to
+                                Studio Ghibli’s creation, it is retroactively considered a Ghibli film due to, not only
+                                Miyazaki’s, but all of the Ghibli founders’ involvement in its production.</p>
+                            <p>Set in a post-post-apocalyptic world inhabited by giant mutant insects and a vast
+                                poisonous jungle, Nausicaä, the princess of the Valley of the Wind, aims to bring peace
+                                between waring nations amid the toxic jungle’s constant expansion. The film released to
+                                universal critical acclaim and is now often named among the best anime feature films
+                                ever made; regular occurrences throughout Miyazaki’s career. Specific praise is often
+                                reserved for the script, soundtrack and the titular female lead character, Nausicaä.</p>
+                            <p>In 1985, a heavily edited English-dubbed adaption titled Warriors of the Wind was
+                                released in the United States. This was a commercial and critical disaster. The changes
+                                and edits impact the plot and heavily diluted the narrative themes of environmentalism
+                                and the cost of war. Ridiculed by Miyazaki, and as a result, many of his and Studio
+                                Ghibli’s films would remain “un-dubbed” and not widely released internationally until
+                                the mid-1990s with Disney’s collaborations.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/nausicaa-plants.jpg"
+                                    alt="Nausicaä of the Valley of the Wind (1984)"
+                                    title="Nausicaä of the Valley of the Wind (1984)" height="200" width="200">
+                                <figcaption>Nausicaä's Garden Labratory in Nausicaä of the Valley of the Wind (1984).
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Studio Ghibli Career &#11167;</h2>
+                    <div class="director-text-text">
+                        <p>Studio Ghibli was formed on 15<sup>th</sup> June 1985 by founding members Hayao Miyazaki,
+                            Isao Takahata
+                            and film producers Toshio Suzuki and Yasuyoshi Tokuma. Both Miyazaki and Takahata have
+                            publically acknowledged the pivotal role of Suzuki in the establishment and success of
+                            Studio Ghibli.</p>
+                        <div class="quote">
+                            <p>“If it were not for Mr. Suzuki, there wouldn’t have been a Studio Ghibli” – Hayao
+                                Miyazaki</p>
+                        </div>
+                        <p>Being a founding member and key figure at the company, Miyazaki would often collaborate on
+                            Studio Ghibli productions that were not his own; regularly serving as an executive producer,
+                            animator or even as a screenwriter.</p>
+                        <figure>
+                            <img class="text-image" draggable="false" src="images/creators-images/ghibli-founders.jpg"
+                                alt="Studio Ghibli founders" title="Studio Ghibli founders" height="200" width="200">
+                            <figcaption>Three of the Studio Ghibli founders. Hayao Miyazaki, Toshio Suzuki, Isao
+                                Takahata (left to right).</figcaption>
+                        </figure>
+                        <h3 onclick="showText(this)">Laputa: Castle in the Sky (1986) &#11167;</h3>
+                        <div class="film-text">
+                            <p>One year on, the first official Studio Ghibli production was released. Hayao Miyazaki’s
+                                third film Laputa: Castle in the Sky (1986). Crucially for Ghibli in their infancy, the
+                                film released to major commercial success, becoming Japan’s highest-grossing animated
+                                film of the year. The film’s aesthetic is credited as a significant milestone in
+                                popularising both the steampunk and dieselpunk sci-fi sub-genres.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/laputa-characters.jpg"
+                                    alt="Laputa: Castle in the Sky (1986)" title="Laputa: Castle in the Sky (1986)"
+                                    height="200" width="200">
+                                <figcaption>Sheeta and Pazu from Laputa: Castle in the Sky (1986).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">My Neighbour Totoro (1988) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Miyazaki’s next film was My Neighbour Totoro (1988). The production was rather chaotic,
+                                particularly for the artists, as the film was simultaneously produced alongside Isao
+                                Takahata’s Grave of the Fireflies (1988). The film simply follows a father and his two
+                                young daughters, Satsuki and Mei, approximately ten and four years old, moving to an old
+                                rural house and their adventures with the wondrous forest spirits that live nearby; the
+                                titular Totoros.</p>
+                            <p>It received widespread critical acclaim and garnered a cult following due to its
+                                relatively low box office return. In the years following its release, the film has
+                                become something of a cultural phenomenon. The titular character Totoro is among the
+                                most recognisable in all of anime, as well as becoming the official mascot and logo for
+                                Studio Ghibli. It is estimated to have earned over $300m in box office and home video
+                                sales to date, and over $1bn in officially licensed merchandise.</p>
+                            <p>My Neighbour Totoro (1988) and Grave of the Fireflies (1988) were released theatrically
+                                in Japan as a dual bill. The stark contrast between the heart-warming, wondrous Totoro
+                                and the gut-wrenching, harrowing Fireflies has been described as “one of the most moving
+                                and remarkable double bills ever offered to a cinema audience”.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/totoro-tree.jpg"
+                                    alt="My Neighbour Totoro (1988)" title="My Neighbour Totoro (1988)" height="200"
+                                    width="200">
+                                <figcaption>Satsuki, Mei and their father discovering the Camphor Tree, Totoro's home,
+                                    in My Neighbour Totoro (1988).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Kiki’s Delivery Service (1989) &#11167;</h3>
+                        <div class="film-text">
+                            <p>To finish the 1980s Hayao Miyazaki released Kiki’s Delivery Service (1989). An adaption
+                                of a popular novel, the film is about a thirteen year old witch, Kiki, who moves to a
+                                new town and tries to earn a living through her ability to fly. It is a classic
+                                coming-of-age story following our protagonist’s vulnerability and subsequent maturity.
+                                The film was a massive commercial success becoming the highest-grossing film in Japan in
+                                1989.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/kiki-flying.jpg"
+                                    alt="Kiki’s Delivery Service (1989)" title="Kiki’s Delivery Service (1989)"
+                                    height="200" width="200">
+                                <figcaption>Kiki flying through the night sky in Kiki’s Delivery Service (1989).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Porco Rosso (1992) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Hayao Miyazaki began the 1990s with his release of Porco Rosso (1992). Miyazaki’s love of
+                                aviation is on full display as the film follows a former WWI fighter pilot now working
+                                as a freelance bounty hunter catching “air pirates”. However, a curse has transformed
+                                him into an anthropomorphic pig. The film is one of the more mature in Miyazaki’s
+                                catalogue, but this did not impact its success as it remained the highest-grossing
+                                animated film in Japan for several years.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/porco-plane.jpg"
+                                    alt="Porco Rosso (1992)" title="Porco Rosso (1992)" height="200" width="200">
+                                <figcaption>Porco's plane from Porco Rosso (1992).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Princess Mononoke (1997) &#11167;</h3>
+                        <div class="film-text">
+                            <p>After spending most of the mid-1990s in production, Princess Mononoke was released in
+                                1997. Set in the late Muromachi period of Japan (approx. 1336 – 1573 CE) the film
+                                follows a young prince searching for a cure to save his life from a deadly curse. He is
+                                inadvertently entangled in a war between the Gods of the forests and the mining colony
+                                destroying it. One of Studio Ghibli’s most mature works, the film’s central theme is
+                                environmentalism and humanity’s relationship with the natural world. Princess Mononoke
+                                (1997) is considered a landmark film in the world of animation due to its breath-taking
+                                visuals, epic story and morally ambiguous, well-written characters. In particular, the
+                                representation of woman and people with disabilities have been singled out for praise.
+                                The film was a commercial and critical blockbuster, becoming Japan’s highest-grossing
+                                film of the year and breaking the box office record for a domestic film.</p>
+                            <div class="quote">
+                                <p>It is the first animated feature film to win the Japan Academy Prize for Best
+                                    Picture.</p>
+                            </div>
+                            <p>Additionally, the film is credited with greatly increasing Studio Ghibli’s popularity and
+                                influence worldwide. Miramax acquired the North American distribution rights for the
+                                film. As a result of the heavily edited Warriors of the Wind version of Nausicaä, Studio
+                                Ghibli had enforced a strict no edits policy. When a suggestion was made to edit
+                                Princess Mononoke (1997), it is rumoured that Studio Ghibli responded by sending Miramax
+                                an authentic Japanese katana with the message: “No Cuts.”</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/mononoke-forest.jpg" alt="Princess Mononoke (1997)"
+                                    title="Princess Mononoke (1997)" height="200" width="200">
+                                <figcaption>Prince Ashitaka riding Yakul though the Cedar Forest in Princess Mononoke
+                                    (1997).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Spirited Away (2001) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Miyazaki himself had suggested Princess Mononoke (1997) would be his final film. However,
+                                it was not. The story goes that while holidaying with family friends, which included
+                                multiple young girls, he realised he had not created a film for ten year old girls.
+                                Thus, he set out to do so. Most Japanese entertainment produced for that demographic at
+                                the time revolved around childhood and teenage romance. Miyazaki felt that was not true
+                                or relatable to girls of that age and wanted to create a female heroine that they could
+                                look up too. This became Chihiro of Spirited Away (2001).</p>
+                            <p>Spirited Away, considered by many to be Hayao Miyazaki’s magnum opus, was released in
+                                2001 and has become a worldwide phenomenon. Chihiro and her parents are moving to a
+                                small town in the Japanese countryside and while exploring, accidently enter the spirit
+                                world. Her parents are turned into pigs by an evil witch and it is up to Chihiro to save
+                                them and return to their world, before she forgets who she is.</p>
+                            <p>A masterpiece in every sense of the word, Spirited Away (2001) is simply a must watch
+                                film. It became the highest-grossing film in Japanese history, a record held for
+                                nineteen years, until 2020. It is often an international viewer’s introduction into
+                                Studio Ghibli and anime as a whole. The film has won countless awards and accolades
+                                worldwide, including the Japan Academy Prize for Best Film. Its international
+                                recognition was sealed where it won the Academy Award for Best Animated Feature at the
+                                75<sup>th</sup> Academy Awards, making the first (and only to date) hand-drawn,
+                                non-English
+                                language film to do so. Hayao Miyazaki did not attend the awards ceremony in the United
+                                States. Years later Miyazaki revealed he didn’t attend the ceremony as a silent protest
+                                against the United States invasion of Iraq.</p>
+                            <div class="quote">
+                                <p>“The reason I wasn’t here for the Academy Award was because I didn’t want to visit a
+                                    country that was bombing Iraq. At the time, my producer shut me up and did not allow
+                                    me to say that, but I don’t see him around today. By the way, my producer also
+                                    shared in that feeling.” – Hayao Miyazaki</p>
+                            </div>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/spirited-away-bathhouse.jpg" alt="Spirited Away (2001)"
+                                    title="Spirited Away (2001)" height="200" width="200">
+                                <figcaption>The bathhouse exterior in Spirited Away (2001).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Howl’s Moving Castle (2004) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Hayao Miyazaki’s anti-war stance was present in his next feature, Howl’s Moving Castle
+                                (2004), loosely based on the novel of the same name. Set in a fictional kingdom with the
+                                prevalence of magic, and against the backdrop of a war with another kingdom, Sophie, a
+                                young milliner, is turned into an elderly woman by a witch. After encountering a wizard
+                                named Howl, she is caught up in his resistance to fighting for the king. The most
+                                recognisable element of the film is certainly the moving castle. Heavily inspired by the
+                                steampunk genre, the astonishing detail and unique movement is one of Miyazaki’s finest
+                                designs. It has become one of the most commercially successful films in Japanese
+                                history, grossing over $200m worldwide. It was also nominated for the Academy Award for
+                                Best Animated Feature.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/howls-castle-exterior.jpg"
+                                    alt="Howl’s Moving Castle (2004)" title="Howl’s Moving Castle (2004)" height="200"
+                                    width="200">
+                                <figcaption>Howl's castle walking across the land from Howl’s Moving Castle (2004).
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">Ponyo (2008) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Toshio Suzuki suggested to Miyazaki to aim his next film at children. After spending time
+                                at a seaside town and inspired by Hans Christian Anderson’s The Little Mermaid,
+                                Miyazaki’s created Ponyo (2008). The film tells the story of Ponyo, a goldfish who
+                                escapes the ocean and is rescued by a five year old boy, and her desire to become a
+                                human girl. Intending to be a celebration of childhood innocence and cheerfulness, Ponyo
+                                (2008) was met with, the now routine for Miyazaki, commercial success and critical
+                                acclaim. During production Miyazaki decided he wanted to use only traditional animation.
+                                He was heavily involved in the hand-drawn animation and the film features 170,000
+                                frames, a record for Miyazaki.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/ponyo-food.jpg"
+                                    alt="Ponyo (2008)" title="Ponyo (2008)" height="200" width="200">
+                                <figcaption>Ponyo and Sosuke enjoying a human meal in Ponyo (2008).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">The Wind Rises (2013) &#11167;</h3>
+                        <div class="film-text">
+                            <p>Hayao Miyazaki’s love for aviation has always been identifiable in his works. It is most
+                                prevalent in The Wind Rises (2013). It is a fictionalised biographical film of Jiro
+                                Horikoshi (1903 – 1982), a designer of fighter aircraft used by the Empire of Japan in
+                                WWII.</p>
+                            <div class="quote">
+                                <p>Miyazaki was inspired after reading a quote of Horikoshi’s: “All I wanted to do was
+                                    to make something beautiful."</p>
+                            </div>
+                            <p>It was intended to release simultaneously with Isao Takahata’s The Tale of the Princess
+                                Kaguya (2013), but a delay in Takahata’s production meant this did not come to fruition.
+                                Yet another critical and commercial success for Miyazaki, the film won the Japan Academy
+                                Prize for both Animation of the Year and Best Musical Score, as well as another Academy
+                                Award nomination for Best Animated Feature. Less than two months after its theatrical
+                                release, Hayao Miyazaki announced his retirement from the production of feature films at
+                                the age of 72. The Wind Rises (2013) has been described as a fittingly bittersweet
+                                swansong for director Hayao Miyazaki.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/naoko.jpg"
+                                    alt="The Wind Rises (2013)" title="The Wind Rises (2013)" height="200" width="200">
+                                <figcaption>Naoko catching Jiro's paper plane in The Wind Rises (2013).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">The Red Turtle (2016) &#11167;</h3>
+                        <div class="film-text">
+                            <p>In 2016 Studio Ghibli released their first non-Japanese film, a co-production with French
+                                company Wild Bunch, titled The Red Turtle (2016). Written and directed by Dutch animator
+                                Michaël Dudok de Wit, the film tells the story of a man shipwrecked on a deserted
+                                island, where he encounters a giant red sea turtle.</p>
+                            <div class="quote">
+                                <p>The film has no dialogue.</p>
+                            </div>
+                            <p>Reportedly, years prior Hayao Miyazaki had seen Dudok de Wit’s Academy Award winning
+                                short animated film Father and Daughter (2000). Miyazaki personally contacted Dudok de
+                                Wit with the offer to produce a feature film for him. Becoming one of Studio Ghibli’s
+                                most critically acclaimed works and earning an Academy Award nomination for Best
+                                Animated Feature, The Red Turtle (2016) is one of their most unique films.
+                                Unfortunately, it did not break into the animation mainstream, but nevertheless gained
+                                itself a successful cult following. A project that likely would not exist without Hayao
+                                Miyazaki connecting with an aspiring animator and director, Michaël Dudok de Wit.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/red-turtle-raft.jpg" alt="The Red Turtle (2016)"
+                                    title="The Red Turtle (2016)" height="200" width="200">
+                                <figcaption>A bamboo escape raft in The Red Turtle (2016).
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="director-text-block">
+                    <h2 onclick="showText(this)">Future & Legacy &#11167;</h2>
+                    <div class="director-text-text">
+                        <h3 onclick="showText(this)">How Do You Live? (TBA) &#11167;</h3>
+                        <div class="film-text">
+                            <p>In 2017 it was announced that Hayao Miyazaki would come out of retirement to make another
+                                feature film, titled How Do You Live? In the years since, little has been made public
+                                about the film. It is known that the film is based on a 1937 novel of the same name,
+                                however much like Miyazaki’s previous adaptions, the film will likely have significant
+                                differences. As expected, it is being hand-drawn by Miyazaki and in 2021 it was
+                                announced that approximately half the animation was complete. There is currently no
+                                attached release date and although Hayao Miyazaki and producer Toshio Suzuki remain
+                                tight-lipped regarding the film’s production, there is a growing belief that fans of
+                                Miyazaki will not have to wait too much longer.</p>
+                            <figure>
+                                <img class="text-image" draggable="false"
+                                    src="images/creators-images/how-do-you-live.jpg" alt="How Do You Live? (TBA)"
+                                    title="How Do You Live? (TBA)" height="200" width="200">
+                                <figcaption>A marketing poster for How Do You Live? (TBA).</figcaption>
+                            </figure>
+                        </div>
+                        <h3 onclick="showText(this)">A Master of His Craft &#11167;</h3>
+                        <div class="film-text">
+                            <p>Hayao Miyazaki has enjoyed a long and successful career at the very top of his
+                                profession. He is regularly compared to Walt Disney for his role in establishing such a
+                                recognisable company in Studio Ghibli. A film studio now synonymous with high-quality
+                                around the world. His films can be characterised by the recurrence of themes such as
+                                pacifism, environmentalism, love and friendship to name but a few. The themes and
+                                meanings behind his films share and reflect his own ideals, which have no doubt
+                                influenced his audiences. His narratives are notable for their encapsulating
+                                atmospheres, thought-provoking stories and complex characters. In particular, his
+                                progressive and positive portrayal of female characters, who contain complex and
+                                individual characteristics, has led many to describe him as a feminist and his heroines
+                                as role models.</p>
+                            <p>Professional recognition followed Miyazaki throughout his career, leading to his films
+                                amassing over 100 separate awards, as well as regularly setting and breaking various
+                                worldwide and domestic records. Highlights include multiple Japan Academy Prizes and an
+                                Academy Award for Spirited Away (2001) in the Best Animated Feature category.
+                                Additionally, he was awarded the Academy Honorary Award in 2014 for his impact and
+                                contributions to animation and cinema as a whole. In 2012, he was awarded the honour of
+                                Person of Cultural Merit by the Japanese government, for outstanding cultural
+                                contributions via his films.</p>
+                            <div class="quote">
+                                <P>Hayao Miyazaki is often described as the godfather of anime.</P>
+                            </div>
+                            <p>His films shaped the future of not only animation, but filmmaking in general. A proponent
+                                of classic, hand-drawn animation, he and his films continue to inspire countless
+                                animators, directors and writers around the world. The jaw dropping visuals, across a
+                                vast array of undeniably fantastic films, cements his legacy as quite simply, one of the
+                                greatest filmmakers of all time.</p>
+                            <figure>
+                                <img class="text-image" draggable="false" src="images/creators-images/miyazaki-art.jpg"
+                                    alt="Hayao Miyazaki Fan Art" title="Hayao Miyazaki Fan Art" height="200"
+                                    width="200">
+                                <figcaption>Fan art of Hayao Miyazaki surrounded by some of his iconic characters.
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!-- Container for YouTube Links -->
+                <div class="youtube-links">
+                    <p>
+                        <!-- Container for Link icon and associated text
+                    Required to keep desired alignment between the two elements -->
+                    <div class="youtube-link">
+                        <a href="https://www.youtube.com/watch?v=93-gRTUrHa8" target="_blank"
+                            class="fa-brands fa-youtube"></a>
+                        <span>Watch John Lasseter's tribute to Hayao Miyazaki at the 87<sup>th</sup> Academy
+                            Awards.</span>
+                    </div>
+                    </p>
+                    <p>
+                    <div class="youtube-link">
+                        <a href="https://www.youtube.com/watch?v=9ZIG14mxB9w" target="_blank"
+                            class="fa-brands fa-youtube"></a>
+                        <span>Watch Hayao Miyazaki's acceptance speech at the 87<sup>th</sup> Academy
+                            Awards.</span>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Javascript Files -->
+<!-- Common to all pages: Navbar dropdowns etc. -->
+<script src="scripts/common-scripts.js"></script>
+<!-- Scripts specific to this page -->
+<script src="scripts/the-creators-scripts.js"></script>
+
+<!-- Webpage Footer: Same on all pages -->
+<footer>
+    <!-- Typical Footer Content: Site Map, Social Media Links, Contact/Newsletter Subscription -->
+    <div class="footer-content">
+        <!-- Site Map -->
+        <div class="site-map">
+            <a href="index.html">Home</a><br>
+            <a class="active">The Creators: Hayao Miyazaki</a><br>
+            <a href="isao-takahata.html">The Creators: Isao Takahata</a><br>
+            <a href="coming-soon.html">Films: Coming Soon</a><br>
+            <a href="interactive-tier-list.html">Interactive Tier List</a><br>
+        </div>
+        <!-- Div container to group and display social media links and contact info vertically -->
+        <div class="interaction">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <p>Follow us to stay up to date with everything Studio Ghibli!</p>
+                <a href="https://www.facebook.com/studioghibliuk/" target="_blank" class="fa-brands fa-facebook"></a>
+                <a href="https://twitter.com/ghibliusa" target="_blank" class="fa-brands fa-twitter"></a>
+                <a href="https://www.instagram.com/ghibliuk/?hl=en" target="_blank" class="fa-brands fa-instagram"></a>
+            </div>
+            <!-- Contact Info and Newsletter -->
+            <div class="contact">
+                <p>Subscribe to our Newsletter!</p>
+                <!-- Disabled form submission with simple browser alert instead
+                Newsletter does not exist thus actual data storage functionality not implemented -->
+                <form onsubmit="alert(name.value + ' has subscribed!'); return false;" autocomplete="on">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="your-email@address.co.uk" required>
+                    <input type="submit" id="sub-btn" value="Subscribe">
+                </form>
+                <p><b>Author:</b>&emsp;Josh Hasan - myemail@example.co.uk</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Copyright Info to display at bottom -->
+    <!-- Span items styled as links, but without actual documents to link to -->
+    <div class="copyright">
+        <p>Copyright &#169; 2022 My Studio Ghibli Website. All Rights Reserved.</p>
+        <span>Privacy Policy</span>
+        <span>Terms & Conditions</span>
+    </div>
+    <!-- Developer Note -->
+    <hr>
+    <p class="note"><b><u>Note:</u></b> This is a footer design demonstration only. The social media links direct to
+        some official Studio Ghibli pages. There is no Newsletter subscription, Privacy Policy or Terms & Conditions
+        documents.</p>
+</footer>
+
+</html>

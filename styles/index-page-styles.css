@@ -1,0 +1,217 @@
+/* Index Page Styles
+Author: Josh Hasan */
+
+/* Hero Image Area
+Linear Gradient function to apply a black overlay, with 0.6 opacity, to darken the hero image
+Height and margin-top set to account for the navbar */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/index-images/hero-image.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 90vh;
+  width: 100%;
+}
+
+/* Text and button on the hero image
+Flexbox display and text-align, align-items used to horizonatlly and vertically center the text to the center of the image */
+.hero-text {
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: larger;
+}
+
+/* Styles for the link button on the hero image
+Blue borader with no background colour and white text initially
+Transition used to fill the background-color on hover */
+.hero-text a {
+  border: 2px solid deepskyblue;
+  border-radius: 5px;
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.4s ease;
+}
+
+/* Styles for the link button on hover */
+.hero-text a:hover {
+  background-color: deepskyblue;
+}
+
+/* Studio Ghibli Information Area
+Linear Gradient function to apply a black overlay, with 0.6 opacity, to darken the background image */
+.ghibli-information {
+  height: 100vh;
+  width: 100%;
+  padding: 15vh 5px 5vh 5px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/index-images/ghibli-logo.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Information Wheel for cycling between different information blocks
+Margin set as auto for horizontal center
+Adds a box shadow with curved corners to the information wheel, providing visual seperation from the background image */
+.ghibli-information-wheel {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px firebrick;
+  color: white;
+  z-index: 2;
+}
+
+/* To align next button, previous button and inforamtion area in a row */
+.information-flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+}
+
+/* The inforamation text
+Initially set to "display: none" so the Javascript file can identify which information set to display
+Adds a fade animation when cycling between the different information sets */
+.information {
+  display: none;
+  height: 100%;
+  width: 90%;
+  padding: 0 10px 0 10px;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+/* Styles for the text */
+.text-container {
+  height: 50%;
+  width: 100%;
+  overflow-x: auto;
+  font-size: large;
+}
+
+/* Styles for the title */
+.text-container h2 {
+  height: 30%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the paragraph text */
+.text-container p {
+  height: 70%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+}
+
+/* Styles for the image area */
+.image-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Associated images to relevant information
+height: fit-content width: 50% and object-fit: scale-down to size and preserve the aspect ratio of the images */
+.information-image {
+  width: 50%;
+  height: fit-content;
+  object-fit: scale-down;
+  padding: 5px;
+}
+
+/* Styles the Next & previous buttons
+Transition used to fill the background-color on hover */
+.prev,
+.next {
+  cursor: pointer;
+  height: 10%;
+  width: 5%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  align-self: center;
+  transition: background-color 0.4s ease;
+}
+
+/* Curves the inside edges of the next button
+Restyles just the next button as it is the inverse parameters from the previous button */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+/* Adds a red background colour with a small transparency on hover
+Uses rgba for firebrick colour (for website colour consistency) and 0.8 opacity */
+.prev:hover,
+.next:hover {
+  background-color: rgba(178, 34, 34, 0.8);
+  color: white;
+}
+
+/* Styles the dot container for manual information block selection */
+.dot-container {
+  text-align: center;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles the dots on the information wheel
+Includes a transition for the background colour of the dot on hover */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+/* Add a background colour to the active dot and on hover */
+.active-dot,
+.dot:hover {
+  background-color: firebrick;
+}
+
+/* Fade Animation */
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}

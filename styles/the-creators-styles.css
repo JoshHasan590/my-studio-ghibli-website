@@ -1,0 +1,191 @@
+/* The Creators Pages Styles
+Author: Josh Hasan */
+
+/* Styles for the whole content area */
+.director-content {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Clearfix hack to reaccount for the size of the floated element */
+.director-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Styles for the Director Bios
+Positioned to the right of the webpage using float */
+.director-card-space {
+    width: 35%;
+    padding: 10px;
+    float: right;
+    background-color: whitesmoke;
+}
+
+/* Styles the Director Bio card
+Tranisition to slowly and smoothly increase the box-shadow intensity on hover */
+.director-card {
+    background-color: deepskyblue;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 4px 2px darkgrey;
+    transition: 0.3s;
+}
+
+/* Increases the box shadow intensity on hover */
+.director-card:hover {
+    box-shadow: 0 0 4px 2px black;
+}
+
+/* Styles for the photo
+height: fit-content width: 100% and object-fit: scale-down to size and preserve the aspect ratio of the image */
+.director-photo {
+    height: fit-content;
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Styles for text area in director bio */
+.director-info {
+    padding: 5px;
+}
+
+/* Styles for each row of text in the director bio */
+.director-info-row {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px 0 10px 10px;
+}
+
+/* Styles of the two columns (heading and info) in the director bio */
+.director-info-column {
+    min-width: 30%;
+    line-height: 150%;
+    color: white
+}
+
+/* Styles for the info column in the director bio */
+.director-info-column.data {
+    margin-left: 5%;
+    width: 65%;
+}
+
+/* Styles for the main director text content on each page */
+.director-text-area {
+    padding: 5px;
+    margin-left: 2%;
+}
+
+/* Sets the width of the text area */
+.director-text {
+    width: 100%;
+}
+
+/* Adds a border to the bottom of each main text section
+Large font size for the headings of each text block */
+.director-text-block {
+    border-bottom: 1px solid grey;
+    font-size: large;
+}
+
+/* Adds padding-left to slightly inset the text underneath each heading
+Medium font size for the text (paragraph text, film sub-headings and film specific text)
+Display initially none, to be changed by Javascript, acting as dropdown elements for each section */
+.director-text-text {
+    display: none;
+    padding-left: 2.5%;
+    font-size: medium;
+}
+
+/* Adds padding-left to slightly inset the film specific text underneath each sub-heading
+Display initially none, to be changed by Javascript, acting as dropdown elements for each sub-section */
+.film-text {
+    display: none;
+    padding-left: 2.5%;
+}
+
+/* Sets figure elements to display: flex so the image and caption are in a column
+Keeps both the image and caption aligned together in the center */
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styles for image captions
+Center align, italic and smaller (than paragraph) text */
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Styles for the figure images
+height: 300px width: fit-content and object-fit: scale-down to size and preserve the aspect ratio of the image */
+.text-image {
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: fit-content;
+    object-fit: scale-down;
+}
+
+/* Disables user selection and adds a pointer cursor for each heading and sub-heading, indicated dropdown functionality */
+h2, h3 {
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Styles specific text blocks in the main paragraph text - a quote or interesting information otherwise
+Double black borders top and bottom to make it stand out
+Center, bold and larger (than main paragraph text) text styling */
+.quote {
+    border-top: 5px double black;
+    border-bottom: 5px double black;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Class used by Javascript to toggle the display of the text section */
+.show {
+    display: block;
+}
+
+/* Styles for the YouTube video links */
+.youtube-links {
+    margin-top: 2%;
+}
+
+/* Keeps the text vertically centered with the YouTube logo */
+.youtube-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles the YouTube logo link
+Removes link decoration, sets a red colour (same as YouTube logo) and xx-large font size */
+.youtube-link a {
+    text-decoration: none;
+    font-size: xx-large;
+    margin-right: 10px;
+    color: red;
+}
+
+/* Sets text size of the description text next to the YouTube link to smaller (than the main paragraph text */
+.youtube-link span {
+    font-size: smaller;
+}
+
+/* Styles the page title */
+.page-title {
+    color: firebrick;
+}

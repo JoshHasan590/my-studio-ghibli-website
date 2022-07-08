@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josh Hasan">
+
+    <!-- Style Sheets -->
+    <!-- Common to all pages: Navbar etc -->
+    <link rel="stylesheet" href="styles/common-styles.css">
+    <!-- Styles specific to this page -->
+    <link rel="stylesheet" href="styles/index-page-styles.css">
+    <!-- Font Awsome library for various icons: Social media links in footer etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
+
+    <title>My Studio Ghibli Website</title>
+</head>
+
+<!-- Page Content -->
+
+<body>
+    <!-- Navigation bar at top of page -->
+    <!-- Includes two sub-navigation menus via onclick dropdowns -->
+    <div class="navbar" id="myNavbar">
+        <a class="active">Home</a>
+        <div class="subnav">
+            <a onclick="showSubnav(0)">The Creators &#11167;</a>
+            <div class="subnav-content">
+                <a href="hayao-miyazaki.html">Hayao Miyazaki</a>
+                <a href="isao-takahata.html">Isao Takahata</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <a onclick="showSubnav(1)">Films &#11167;</a>
+            <div class="subnav-content">
+                <a href="coming-soon.html">Nausicaä of the Valley of the Wind (1984)</a>
+                <a href="coming-soon.html">Laputa: Castle in the Sky (1986)</a>
+                <a href="coming-soon.html">Grave of the Fireflies (1988)</a>
+                <a href="coming-soon.html">My Neighbour Totoro (1988)</a>
+                <a href="coming-soon.html">Kiki's Delivery Service (1989)</a>
+                <a href="coming-soon.html">Only Yesterday (1991)</a>
+                <a href="coming-soon.html">Porco Rosso (1992)</a>
+                <a href="coming-soon.html">Ocean Waves (1993)</a>
+                <a href="coming-soon.html">Pom Poko (1994)</a>
+                <a href="coming-soon.html">Whisper of the Heart (1995)</a>
+                <a href="coming-soon.html">Princess Mononoke (1997)</a>
+                <a href="coming-soon.html">My Neighbours the Yamadas (1999)</a>
+                <a href="coming-soon.html">Spirited Away (2001)</a>
+                <a href="coming-soon.html">The Cat Returns (2002)</a>
+                <a href="coming-soon.html">Howl's Moving Castle (2004)</a>
+                <a href="coming-soon.html">Tales from Earthsea (2006)</a>
+                <a href="coming-soon.html">Ponyo (2008)</a>
+                <a href="coming-soon.html">Arrietty (2010)</a>
+                <a href="coming-soon.html">From Up on Poppy Hill (2011)</a>
+                <a href="coming-soon.html">The Wind Rises (2013)</a>
+                <a href="coming-soon.html">The Tale of the Princess Kaguya (2013)</a>
+                <a href="coming-soon.html">When Marnie Was There (2014)</a>
+                <a href="coming-soon.html">The Red Turtle (2016)</a>
+                <a href="coming-soon.html">Earwig and the Witch (2020)</a>
+                <a href="coming-soon.html">How Do You Live? (TBA)</a>
+            </div>
+        </div>
+        <a href="interactive-tier-list.html">Interactive Tier List</a>
+    </div>
+    <!-- Return to Top button -->
+    <!-- Initially hidden. Appears after page has been scrolled down a certain amount -->
+    <button type="button" onclick="topOfPage()" class="top-button" id="top-button"
+        title="Top of Page">&#11165;<br>&#11165;</button>
+
+
+    <!-- Hero Image -->
+    <!-- Takes up the whole viewport on load. Includes the title, a simple description and functioning button -->
+    <!-- Hero image set in corresponding CSS: index-page-style.css -->
+    <div class="hero-image" id="hero-image">
+        <div class="hero-text">
+            <div class="page-title">
+                <h1>Studio Ghibli</h1>
+            </div>
+            <p>World-famous Japanese Animation</p>
+            <a href="#ghibli-information">Find Out More!</a>
+        </div>
+    </div>
+    <!-- Subsection below the hero image -->
+    <!-- "ghibli-information" div used as the href location for the hero image button. Smooth scroll enabled -->
+    <!-- Background image set in corresponding CSS: index-page-styles.css -->
+    <div class="ghibli-information" id="ghibli-information">
+        <!-- Information Wheel: Cycle information sets via Javascript, index-page-scripts.js  -->
+        <div class="ghibli-information-wheel">
+            <!-- Container to hold the inforamtion set, next and previous buttons -->
+            <div class="information-flexbox">
+                <!-- Previous button -->
+                <a class="prev" onclick="changeInformation(-1)">&#10094;</a>
+                <!-- Information Set 0 -->
+                <div class="information" id="information">
+                    <div class="text-container">
+                        <h2>What is Anime?</h2>
+                        <p>Anime, whilst being an abbreviation of the word “animation”, is more colloquially used to
+                            refer to animations produced in Japan. Often painstakingly hand-drawn, the art style is
+                            highly distinctive and rich with detail. It is important to note that anime has a vast
+                            breadth of content, both television and film, covering all genres. Much like traditional
+                            live-action film, anime also targets all audiences, children and adults alike. Anime
+                            productions have inspired countless works worldwide, for example imagery in Ghost in the
+                            Shell (1995) and The Matrix (1999), including the iconic green code rain.</p>
+                    </div>
+                    <div class="image-container">
+                        <img class="information-image" src="images/index-images/ghost-in-the-shell-neck.jpg"
+                            alt="Ghost in the Shell (1995)" title="Ghost in the Shell (1995)" width="200" height="200">
+                        <img class="information-image" src="images/index-images/the-matrix-neck.jpg"
+                            alt="The Matrix (1999)" title="The Matrix (1999)" width="200" height="200">
+                    </div>
+                </div>
+                <!-- Information Set 1 -->
+                <div class="information" id="information">
+                    <div class="text-container">
+                        <h2>What is Studio Ghibli?</h2>
+                        <p>Founded in 1985 and based in Tokyo, Studio Ghibli are best known for their animated feature
+                            films and have released over twenty works to date. Spanning a variety of unique stories and
+                            styles, many of the films follow a young protagonist’s coming-of-age and inner-growth
+                            throughout their respective plights. For the most part, the films can be considered
+                            family-friendly. However, that isn’t to say the creators dilute the messages or themes of
+                            their films. Japanese traditionalism and environmentalism are regularly present, as is the
+                            cost and horrors of war. Two of Ghibli’s most notable films are the harrowing Grave of the
+                            Fireflies (1988) and the Academy Award winning Spirited Away (2001).</p>
+                    </div>
+                    <div class="image-container">
+                        <img class="information-image" src="images/index-images/main-fireflies.jpg"
+                            alt="Grave of the Fireflies (1988)" title="Grave of the Fireflies (1988)" width="200"
+                            height="200">
+                        <img class="information-image" src="images/index-images/main-spirited-away.jpg"
+                            alt="Spirited Away (2001)" title="Spirited Away (2001)" width="200" height="200">
+                    </div>
+                </div>
+                <!-- Information Set 2 -->
+                <div class="information" id="information">
+                    <div class="text-container">
+                        <h2>Studio Ghibli & Disney</h2>
+                        <p>An apt comparison for Studio Ghibli is that of Disney and their classic feature films from
+                            the 1900s. In fact, Disney and Ghibli have enjoyed decades of collaboration. In 1996, Disney
+                            became the worldwide distributer of Studio Ghibli’s films, as well as producing high-quality
+                            English language dubs of the films. Notable cast members include: Patrick Stewart, Christian
+                            Bale, Daisy Ridley, Anne Hathaway and Matt Damon. Although distribution rights slowly
+                            changed ownership throughout the 2010s, there is no doubting Disney’s impact on popularising
+                            Studio Ghibli and their films worldwide.</p>
+                    </div>
+                    <div class="image-container">
+                        <img class="information-image" src="images/index-images/disney-logo.jpg"
+                            alt="Walt Disney Pictures Logo" title="Walt Disney Pictures" width="200" height="200">
+                        <img class="information-image" src="images/index-images/main-daisy-ridley.jpg"
+                            alt="Daisy Ridley VA for Only Yesterday (1991)"
+                            title="Daisy Ridley VA for Only Yesterday (1991)" width="200" height="200">
+                    </div>
+                </div>
+                <!-- Next button -->
+                <a class="next" onclick="changeInformation(1)">&#10095;</a>
+            </div>
+            <!-- Container to hold dots for the Information Wheel -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentInformation(0)"></span>
+                <span class="dot" onclick="currentInformation(1)"></span>
+                <span class="dot" onclick="currentInformation(2)"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Javascript Files -->
+<!-- Common to all pages: Navbar dropdowns etc. -->
+<script src="scripts/common-scripts.js"></script>
+<!-- Scripts specific to this page -->
+<script src="scripts/index-page-scripts.js"></script>
+
+<!-- Webpage Footer: Same on all pages -->
+<footer>
+    <!-- Typical Footer Content: Site Map, Social Media Links, Contact/Newsletter Subscription -->
+    <div class="footer-content">
+        <!-- Site Map -->
+        <div class="site-map">
+            <a class="active">Home</a><br>
+            <a href="hayao-miyazaki.html">The Creators: Hayao Miyazaki</a><br>
+            <a href="isao-takahata.html">The Creators: Isao Takahata</a><br>
+            <a href="coming-soon.html">Films: Coming Soon</a><br>
+            <a href="interactive-tier-list.html">Interactive Tier List</a><br>
+        </div>
+        <!-- Div container to group and display social media links and contact info vertically -->
+        <div class="interaction">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <p>Follow us to stay up to date with everything Studio Ghibli!</p>
+                <a href="https://www.facebook.com/studioghibliuk/" target="_blank" class="fa-brands fa-facebook"></a>
+                <a href="https://twitter.com/ghibliusa" target="_blank" class="fa-brands fa-twitter"></a>
+                <a href="https://www.instagram.com/ghibliuk/?hl=en" target="_blank" class="fa-brands fa-instagram"></a>
+            </div>
+            <!-- Contact Info and Newsletter -->
+            <div class="contact">
+                <p>Subscribe to our Newsletter!</p>
+                <!-- Disabled form submission with simple browser alert instead
+                Newsletter does not exist thus actual data storage functionality not implemented -->
+                <form onsubmit="alert(name.value + ' has subscribed!'); return false;" autocomplete="on">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="your-email@address.co.uk" required>
+                    <input type="submit" id="sub-btn" value="Subscribe">
+                </form>
+                <p><b>Author:</b>&emsp;Josh Hasan - myemail@example.co.uk</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Copyright Info to display at bottom -->
+    <!-- Span items styled as links, but without actual documents to link to -->
+    <div class="copyright">
+        <p>Copyright &#169; 2022 My Studio Ghibli Website. All Rights Reserved.</p>
+        <span>Privacy Policy</span>
+        <span>Terms & Conditions</span>
+    </div>
+    <!-- Developer Note -->
+    <hr>
+    <p class="note"><b><u>Note:</u></b> This is a footer design demonstration only. The social media links direct to
+        some official Studio Ghibli pages. There is no Newsletter subscription, Privacy Policy or Terms & Conditions
+        documents.</p>
+</footer>
+
+</html>

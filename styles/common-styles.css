@@ -1,0 +1,265 @@
+/* Styles common to every webpage on the site
+Author: Josh Hasan */
+
+/* Resets default margin and padding values of Body div */
+body {
+    margin: 0;
+    padding: 10vh 0 0 0;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+/* Adds a smooth scrolling transition when using same page links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adds a custom font for the text */
+@font-face {
+    font-family: studio-ghibli-font;
+    src: url(../fonts/ghibli-font.otf);
+}
+
+/* Adds a custom bold font for the text */
+@font-face {
+    font-family: studio-ghibli-font;
+    src: url(../fonts/ghibli-font-bold.otf);
+    font-weight: bold;
+}
+
+/* Sets every element to include the padding and border size within the element's height and width definitions
+Also sets the font-family of all elements to the defined Studio Ghibli font */
+* {
+    box-sizing: border-box;
+    font-family: studio-ghibli-font;
+}
+
+/* Navigation Bar */
+
+/* Position and colour navigation bar
+Keeps the navigation bar fixed to the top of the browser viewport */
+.navbar {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: firebrick;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Sub-navigation item in main navbar */
+.subnav {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* The dropdown forming the subnav
+Initially hidden, for user click to reveal the dropdown
+Organised in a flex column display */
+.subnav-content {
+    display: none;
+    position: absolute;
+    background-color: firebrick;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    z-index: 999;
+    max-height: 25vh;
+    overflow-y: auto;
+}
+
+/* Each individual subnav item */
+.subnav-content a {
+    height: 5vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* Class used to toggle the subnav-content between being displayed and hidden */
+.show {
+    display: block;
+}
+
+/* Style links on hover */
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Current link style */
+.navbar a.active {
+    background-color: deepskyblue;
+    color: white;
+}
+
+/* Styles for the "return to top of page" button */
+
+/* Fixed to the bottom right corner of the webpage
+External Javascript keeps the button hidden until the user has scrolled down part of the webpage
+Opacity set a 0.6 for a non-invasive, slightly transparent appearance */
+.top-button {
+    display: none;
+    position: fixed;
+    padding: 15px 10px;
+    bottom: 1%;
+    right: 0.5%;
+    z-index: 998;
+    line-height: 50%;
+    text-align: center;
+    background-color: deepskyblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.6;
+}
+
+/* Opacity set to 1 on hover */
+.top-button:hover {
+    opacity: 1;
+}
+
+/* Styles for the Footer */
+
+/* Sets a dark grey background colour with small-sized white text for the whole footer */
+footer {
+    padding: 10px;
+    font-size: small;
+    background-color: #383838;
+    color: white;
+}
+
+/* Used flexbox in row display for some footer items
+Even spacing across the page width */
+.footer-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Division lines in the footer */
+footer hr {
+    width: 95%;
+}
+
+/* Styles for the website map navigation links */
+.site-map {
+    margin: 10px;
+    padding: 5px;
+}
+
+/* Removes the text decoration and adds a pointer cursor for the link items */
+.site-map a {
+    line-height: 200%;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Active page styling */
+.site-map .active {
+    color: deepskyblue;
+}
+
+/* Hover styling */
+.site-map a:hover {
+    color: deepskyblue;
+}
+
+/* Styles for the Social Media links */
+.social-media {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Removes text decoration for the social media links
+Sets xx-large font size for the icons */
+.social-media a {
+    text-decoration: none;
+    font-size: xx-large;
+    margin: 50px;
+    color: white;
+}
+
+/* Social media link styles on hover */
+.social-media a:hover {
+    color: deepskyblue;
+}
+
+/* Sets style for the contact information content*/
+.contact {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Subscribe button styles on hover */
+#sub-btn:hover {
+    cursor: pointer;
+    background-color: deepskyblue;
+}
+
+/* Sets copyright content styles */
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: x-small;
+}
+
+/* Adds styles for span items inside the copyright content */
+.copyright span {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    margin: 0 10px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/* Copyright span items styles on hover */
+.copyright span:hover {
+    color: deepskyblue;
+    border-color: deepskyblue;
+}
+
+/* Styles for the note item */
+.note {
+    margin-left: 5%;
+    font-size: xx-small;
+}
+
+/* Styles for the page title
+Sets x-large font size and center align */
+.page-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: x-large;
+}
+
+/* Styles for the hr division element in the page title */
+.page-title hr {
+    width: 95%;
+    border: 10px solid deepskyblue;
+    border-radius: 5px;
+}

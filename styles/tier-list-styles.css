@@ -1,0 +1,137 @@
+/* Tier List Styles
+Author: Josh Hasan */
+
+/* Position and Style the Tier List 
+Use of viewpoint height/width to account for different screen sizes */
+.tierlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 70vh;
+    width: 80vw;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #303030;
+    border: thick solid black;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Position and style each tier in the tier list
+Height and width set as percentages of the parent div (tierlist) */
+.tier {
+    display: flex;
+    padding: 0;
+    margin: 3px;
+    height: 15%;
+    width: 100%;
+    background-color: dimgray;
+}
+
+/* Position and style the label on each tier
+Height set as 100% of parent div (tier), width set as 10%, thus each label acts as a "heading" for each tier
+Background colour initially set to white, but changed by external javascript file (my-scripts.js)
+user-select: none prevents default ability to highlight the text element on the label */
+.label {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    background-color: white;
+    user-select: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Position and style the rankings each tier - The area where the film image elements are moved to and from
+Setting flex-flow as row wrap positions each film in a row format, then on a new line if the rankings div fills
+Overflow set to auto adds a scrollbar when films are added to a new line
+Height set to 100% and width set to 90% of the parent div (tier) to use the remaining space left by label div */
+.rankings {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    overflow: auto;
+}
+
+/* Position and style the films
+Small margins (1px) added to the left and right to keep space between each film on the same tier
+The films are displayed larger when in the imagebank for ease of viewing and scaled down when moved to the tier list
+max-height: 100% scales the image to the full height of the rankings div or to the image's full height in the imagebank
+max-width: fit-content and object-fit: scale-down keeps the aspect ratio consistent */
+.film {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 1px 0px 1px;
+    max-height: 100%;
+    max-width: fit-content;
+    object-fit: scale-down;
+}
+
+/* Position and style the imagebank
+Setting flex-flow as row wrap positions each film in a row format, then on a new line when the row fills
+Use of viewpoint height/width to account for different screen sizes
+Use of min-height to allow the imagebank to shrink/increase with removal/addition of images */
+.imagebank {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    min-height: 10vh;
+    width: 80vw;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: dimgray;
+    border: thick solid black;
+}
+
+/* Styles for the buttons display area */
+.button-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Styles for each button
+Opactiy set to 0.6 initially
+Adds a transition-duration for the opacity that changes on hover */
+.tier-list-button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: firebrick;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    opacity: 0.6;
+    transition-duration: 0.4s;
+    font-size: medium;
+}
+
+/* Styles of the buttons on hover
+Opacity set to 1 */
+.tier-list-button:hover {
+    opacity: 1;
+}
+
+/* Styles of the buttons when clicked
+Opacity set back to 0.6 temorarily - Simulates a click visually */
+.tier-list-button:active {
+    opacity: 0.6;
+}
+
+/* Styles the pag title */
+.page-title {
+    color: firebrick;
+}
